@@ -1,0 +1,37 @@
+<html>
+    <body>
+       <h1 id="judul">Program Horoskop</h1>
+       <button id="btnSubmit">Submit</button>
+       <p>Keberuntungan Anda hari ini:</p>
+       <hr>
+       <p id="text"></p>
+        <script>
+            var btnSubmit = document.getElementById('btnSubmit');
+            btnSubmit.addEventListener('click', function(){
+                const randomNumber = Date.now();
+                var text = document.getElementById('text');
+                if (randomNumber % 2 == 0){
+                    text.innerHTML += 'Hebat!! <p>';
+                        console.log(randomNumber)
+               } else if (randomNumber % 3 == 0){
+                    text.innerHTML += 'Boleh juga! <p>';
+                        console.log(randomNumber)
+               } else {
+                    text.innerHTML += 'Mengerikan... <p>';
+                        console.log(randomNumber)
+               }
+//          switch (randomNumber) {
+//            case (randomNumber % 2 == 0):
+//              judul.innerHTML = 'Hebat!! ' +randomNumber;
+//              break;
+//            case (randomNumber % 2 == 1):
+//              judul.innerHTML = 'Boleh juga! ' +randomNumber;
+//              break;
+//            case (randomNumber % 2 == 2):
+//              judul.innerHTML = 'Mengerikan... ' +randomNumber;
+//              break;
+//         }
+        });
+        </script>
+    </body>
+</html>
